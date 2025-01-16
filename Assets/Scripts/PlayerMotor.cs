@@ -18,7 +18,6 @@ public class PlayerMotor : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +35,6 @@ public class PlayerMotor : MonoBehaviour
             playerVelocity.y = -2f;
         }
         controller.Move(playerVelocity * Time.deltaTime);
-        Debug.Log(playerVelocity.y);
     }
     public void Jump()
     {

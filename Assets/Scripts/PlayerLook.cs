@@ -10,6 +10,13 @@ public class PlayerLook : MonoBehaviour
     public float xSensitivity = 30f;
     public float ySensitivity = 30f;
 
+    private void Start()
+    {
+        // Naètení aktuální citlivosti z PlayerPrefs
+        xSensitivity = PlayerPrefs.GetFloat("xSensitivity", 30f);
+        ySensitivity = PlayerPrefs.GetFloat("ySensitivity", 30f);
+    }
+
     public void ProcessLook(Vector2 input)
     {
         float mouseX = input.x;
